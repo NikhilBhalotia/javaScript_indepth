@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Element</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+
+    <script>
+        // function newLi(language='java'){
+        //     const newLi = document.createElement('li');
+        //     newLi.innerText = language;
+        //     document.querySelector('.language').appendChild(newLi);
+
+
+        // }
+        // newLi('Cpp')
+        // newLi('Python')
+        // newLi('Java')
+        // newLi('Numpy')
+        // newLi('C')
+
+        function newLiOptimized(language){
+            const newLi = document.createElement('li');
+            newLi.appendChild(document.createTextNode(language));
+            document.querySelector('.language').appendChild(newLi)
+        }
+        newLiOptimized('java')
+        newLiOptimized('Python')
+        newLiOptimized('Advanced Java')
+
+
+        //  ----------> Edit <-----------
+
+        // const secondLi = document.querySelector('li:nth-child(2)')
+        // console.log(secondLi);
+        // // secondLi.innerHTML = "HTML"
+        // const newChild = document.createElement('li');
+        // newChild.innerHTML = "HTML"
+        // secondLi.replaceWith(newChild);
+        
+        // ---------------> Remove <------------
+
+        // const lastChild = document.querySelector('li:last-child')
+        // // console.log(lastChild);
+        // lastChild.remove()
+        
+
+    </script>
+</body>
+</html>
