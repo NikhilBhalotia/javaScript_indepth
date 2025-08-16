@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="end">Stop</button>
+
+</body>
+    <script>
+        let heading = document.querySelector('h1')
+
+        const changeHeading = ()=>{
+            heading.innerText = "Best JavaScript Series"
+        }
+        
+        const sayMyName = ()=>{
+            console.log("Nikhil");
+            
+        }
+        // setTimeout(sayMyName,2000);
+        const text = setTimeout(changeHeading,2000);
+
+        document.querySelector("#end").addEventListener('click',()=>{
+            clearTimeout(text)
+        })
+
+    </script>
+</html>
