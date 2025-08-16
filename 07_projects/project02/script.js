@@ -4,8 +4,6 @@ const form = document.querySelector('form');
       e.preventDefault();
       const height = parseInt(document.querySelector('#height').value);
       const weight = parseInt(document.querySelector('#weight').value);
-      console.log(typeof height);
-      console.log(weight);
       if(height ===''||height<0||isNaN(height) || weight ==='' || weight<0 || isNaN(weight)){
         const results = document.querySelector('#results');
         results.innerHTML = "Please Enter Valid Input";

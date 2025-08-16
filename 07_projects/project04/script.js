@@ -13,7 +13,6 @@ let playGame = true;
 
 if (playGame) {
   submitguess.addEventListener("click", (val) => {
-    console.log(randomNumber);
     val.preventDefault();
     let guessNumber = parseInt(guessingField.value);
     checkNumber(guessNumber);
@@ -71,7 +70,6 @@ function updateArray(guessNumber) {
   // previousGuesses.innerHTML = previousGuessesArray
 
   previousGuesses.innerHTML = previousGuesses.innerHTML + guessNumber + " ";
-  console.log(previousGuessesArray);
 }
 
 function updateHtml(guessNumber, text) {

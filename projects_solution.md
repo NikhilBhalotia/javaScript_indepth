@@ -22,8 +22,6 @@ const form = document.querySelector('form');
       e.preventDefault();
       const height = parseInt(document.querySelector('#height').value);
       const weight = parseInt(document.querySelector('#weight').value);
-      console.log(typeof height);
-      console.log(weight);
       if(height ===''||height<0||isNaN(height) || weight ==='' || weight<0 || isNaN(weight)){
         const results = document.querySelector('#results');
         results.innerHTML = "Please Enter Valid Input";
@@ -45,13 +43,11 @@ const form = document.querySelector('form');
 
 const guessNum = document.querySelector("#guessField");
 const randomNum = Math.floor((Math.random()*100)+1)
-console.log(randomNum);
 
 const submit = document.querySelector("#subt");
 
 submit.addEventListener('submit',(e)=>{
     let numberGuessed = guessNum.innerHTML
-    console.log(numberGuessed);
     
 })
 
@@ -78,7 +74,6 @@ let playGame = true;
 
 if (playGame) {
   submitguess.addEventListener("click", (val) => {
-    console.log(randomNumber);
     val.preventDefault();
     let guessNumber = parseInt(guessingField.value);
     checkNumber(guessNumber);
@@ -136,7 +131,6 @@ function updateArray(guessNumber) {
   // previousGuesses.innerHTML = previousGuessesArray
 
   previousGuesses.innerHTML = previousGuesses.innerHTML + guessNumber + " ";
-  console.log(previousGuessesArray);
 }
 
 function updateHtml(guessNumber, text) {
