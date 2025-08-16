@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in javaScript</title>
+</head>
+<style>
+    body{
+        background-color: rgb(29, 28, 28);
+        color: aliceblue;
+    }
+</style>
+<body>
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images" style="list-style: none;">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+
+<script>
+    let owl = document.querySelector("#owl");
+    let images = document.querySelector("#images");
+    //  attachEvent()
+    // jQuery - on
+
+    // 2. onclick :-
+
+    // owl.onclick = ()=>{
+    //     alert('clicked')
+    // }
+    
+   
+    // 3. EventListeners :-
+
+    // owl.addEventListener('click',(e)=>{
+    //     alert('clicked owl')
+    // })
+
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altKey, ctrlKey, shiftKey, keyCode
+
+    owl.addEventListener('click',(e)=>{
+        // console.log(e);
+        // console.log(e.type);
+        // console.log(e.timeStamp);
+        // console.log(e.defaultPrevented);
+        // console.log(e.target);
+        // console.log(e.toElement);
+        // console.log(e.srcElement);
+        // console.log(e.currentTarget);
+        // console.log(e.clientX);
+        // console.log(e.clientY);
+        // console.log(e.screenX);
+        // console.log(e.screenY);
+        // console.log(e.altKey);
+        // console.log(e.ctrlKey);
+        // console.log(e.shiftKey);
+        // console.log(e.keyCode);
+        
+    })
+
+
+    //  Event Propogation :-
+
+    // 1. event bubbling:-
+
+    // images.addEventListener('click',()=>{
+    //     console.log('Ul is clicked');
+        
+    // },false)
+    // owl.addEventListener('click',(e)=>{
+    //     console.log('owl is clicked');
+    //     // e.stopPropagation();
+    // },false)
+
+    // 2. event capturing:-
+
+    // images.addEventListener('click',()=>{
+    //     console.log('Ul is clicked');
+        
+    // },true)
+    // owl.addEventListener('click',()=>{
+    //     console.log('owl is clicked');
+        
+    // },true)
+
+// google.addEventListener('click',(e)=>{
+//     e.preventDefault()
+//     console.log('google clicked');  
+// })
+
+// images.addEventListener('click',(e)=>{
+//     let target = e.target;
+//     // console.log(target);
+    
+//     // target.style.display = 'none'
+
+//     target.remove();
+    
+// })
+
+
+
+
+</script>
+
+</html>
