@@ -4,7 +4,6 @@ let remainGuesses = document.querySelector(".lastResult");
 let previousGuesses = document.querySelector(".guesses");
 let output = document.createElement("p");
 
-let randomNumber = parseInt(Math.random() * 100 + 1);
 
 let previousGuessesArray = [];
 let currentGuess = 0;
@@ -12,15 +11,17 @@ let currentGuess = 0;
 let playGame = true;
 
 if (playGame) {
+  let randomNumber = parseInt(Math.random() * 100 + 1);
   submitguess.addEventListener("click", (val) => {
+    console.log(randomNumber);
     val.preventDefault();
     let guessNumber = parseInt(guessingField.value);
-    checkNumber(guessNumber);
+    checkNumber(guessNumber,randomNumber);
     guessingField.value = "";
   });
 }
 
-function checkNumber(guessNumber) {
+function checkNumber(guessNumber,randomNumber) {
   if (guessNumber === randomNumber) {
     updateArray(guessNumber);
     updateHtml(
@@ -70,6 +71,7 @@ function updateArray(guessNumber) {
   // previousGuesses.innerHTML = previousGuessesArray
 
   previousGuesses.innerHTML = previousGuesses.innerHTML + guessNumber + " ";
+  console.log(previousGuessesArray);
 }
 
 function updateHtml(guessNumber, text) {
