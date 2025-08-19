@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+  </head>
+  <body>
+    <script>
+      // The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+      //  promise 1:-
+
+      //    const promise1 = new Promise((resolve,reject)=>{
+      //     setTimeout(()=>{
+      //         console.log("Promise 1");
+      //         resolve()
+      //     },1000)
+
+      //    })
+      //    promise1.then(()=>{
+      //     console.log("Promise 1 Resolved ");
+      //    })
+
+      //    promise 2:-
+
+      //    new Promise((resolve,reject)=>{
+      //     setTimeout(()=>{
+      //         console.log("Promise 2");
+      //         resolve();
+      //     },1000)
+      //    }).then(()=>{
+      //     console.log("Promise 2 Resolved");
+
+      //    })
+
+      //     promise 3:-
+
+      // new Promise((resolve,reject)=>{
+      //     setTimeout(()=>{
+      //         console.log("Promise 3");
+      //         resolve(300);
+      //     },1000)
+      //    }).then((res)=>{
+      //     console.log("Promise 3 Resolved",res);
+      //    })
+
+      //     promise 4:-
+
+      // new Promise((resolve,reject)=>{
+      //     setTimeout(()=>{
+      //         console.log("Promise 4");
+      //         reject({name : "Nikhil",age:21});
+      //     },1000)
+      //    }).then(()=>{
+      //     console.log("Promise 4 Resolved");
+
+      //    }).catch((rej)=>{
+      //     console.log("Promise 4 rejected",rej);
+
+      //    })
+
+      //  Promise 5:-
+
+    //   new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+            // let error = false;
+            // if(!error){
+            //     resolve({ name: "Nikhil", age: 21 });
+            // }
+            // else{
+            //     reject("Something went wrong! Your promise is rejeted!")
+            // }
+    //     }, 2000);
+    //   })
+    //     .then((res) => {
+    //         return res.age
+    //     }).then((age)=>{
+    //         console.log(age);     
+    //     }).catch((rej)=>{
+    //         console.log(rej);    
+    //     }).finally(()=>{
+    //         console.log("Your Promise either resolved or rejected!");  
+    //     })
+
+
+    //  promise 6:-
+
+//    const promise6 =  new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             let error = true;
+//             if(!error){
+//                 resolve({ name: "Nikhil", age: 21 });
+//             }
+//             else{
+//                 reject("Something went wrong! Your promise is rejeted!")
+//             }  
+//         },1000)
+//        })
+
+
+//  using async and await:-
+
+//       async function promiseHandler(){
+//         try {
+//         const respone = await promise6
+//         console.log(respone);
+//         } catch (error) {
+//             console.log(error);
+            
+//         }
+//        }
+//        promiseHandler()
+
+
+//  practical usecase:-
+
+// async function getAlluser(){
+//     const response = await fetch("https://api.github.com/users/nikhilbhalotia")
+// const data = await response.json()
+// console.log(data)
+// console.log(data.login)
+// }
+// getAlluser()
+
+
+// fetch("https://api.github.com/users/nikhilbhalotia")
+// .then((response)=>{
+//     return response.json() 
+// })
+// .then((data)=>{
+//     console.log(data);
+// })
+// .catch((error)=>{
+//     console.log(error);
+// })
+
+
+
+// The fetch() method of the Window interface starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available.
+
+
+    </script>
+  </body>
+</html>

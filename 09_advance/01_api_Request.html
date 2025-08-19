@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        
+        .newDiv{
+            height: 500px;
+            width: 300px;
+            border: 2px solid black;
+            border-radius: 8px;
+            background-color: beige;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            font-size: 2rem;
+            gap: 20px;
+        }
+
+    </style>
+  </head>
+  <body style="background-color: rgb(50, 49, 49)">
+    <script>
+      const myUrl = "https://api.github.com/users/nikhilbhalotia";
+      const xhr = new XMLHttpRequest();
+
+      // console.log(xhr);
+
+let newElement = document.createElement('div')
+// console.log(newElement);
+newElement.classList.add('newDiv')
+
+document.body.appendChild(newElement);
+
+let newImg = document.createElement('img');
+console.log(newImg);
+
+
+
+xhr.open("GET", myUrl);
+xhr.send();
+
+// console.log(xhr.readyState);
+
+xhr.onreadystatechange = function () {
+
+
+    const data = JSON.parse(this.responseText);
+    console.log(data);
+    newImg.src = data.avatar_url;
+    newElement.innerText = "Followers : " + data.followers
+    newElement.innerText =newElement.innerText + " Following : "+  data.following
+    newElement.appendChild(newImg);
+
+
+    // console.log(xhr.readyState);
+    // if (xhr.readyState === 4) {
+              
+        //   const data = this.responseText
+        //   console.log(typeof data);
+        //   console.log(data);
+
+        //   const data = JSON.parse(this.responseText);
+        //   console.log(typeof data);
+        // console.log(data);
+        //   console.log(data.followers);
+        //   console.log(data.avatar_url);
+
+
+
+    }   
+
+// };
+
+
+
+
+    </script>
+  </body>
+</html>
