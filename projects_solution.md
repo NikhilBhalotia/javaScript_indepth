@@ -272,3 +272,51 @@ function type(){
     })
 
 ```
+
+## project 9
+
+```javascript
+let button = document.querySelector("button")
+let cursor = document.querySelector(".cursor")
+
+document.addEventListener("mousemove", (e) => {
+  cursor.style.left = e.pageX + "px";
+  cursor.style.top = e.pageY + "px";
+});
+
+button.addEventListener("mouseenter", () => {
+  cursor.classList.add("cursor-grow");
+});
+
+button.addEventListener("mouseleave", () => {
+  cursor.classList.remove("cursor-grow");
+});
+
+```
+
+## project 10
+
+```javascript
+ let emojis = [
+  "🤣","😒","👍","😂","🤣","😊","😍","👌","😘","💕",
+  "😁","🙌","😎","🙂","🤗","🤩","😑","🤨","🫡","😶‍🌫️",
+  "😏","😣","😥","😮","😭","😦","🤯","🥶","🥵","🥳",
+  "🤡","🤠"
+];
+      let emoji = document.getElementById("emoji");
+
+      let length = emojis.length
+      emoji.addEventListener('mouseenter',()=>{
+
+        let randomEmoji = emojis[Math.floor(Math.random()*length)]
+        emoji.textContent = randomEmoji
+        emoji.style.filter = "none";
+        
+      })
+
+      emoji.addEventListener('mouseleave',()=>{
+        emoji.style.filter = "grayscale(100%)"
+
+      })
+
+```
