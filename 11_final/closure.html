@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>closure</title>
+  </head>
+  <body>
+
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+
+
+    <script>
+      //  lexical scope :-
+
+      // function outer(){
+      //     let name="Nikhil"
+      //     // console.log("Outer : ",password); ---> cannot access from the child
+
+      //     function inner(){
+      //         let password = 1234
+      //         console.log("Inner : ",name); // ----> can access from the parent
+
+      //     }
+      //     function inner2(){
+      //         // console.log("Inner2 : ",password); ---> cannot access from the sibling
+
+      //     }
+      //     inner()
+      //     inner2()
+
+      // }
+      // outer()
+      // // console.log("Outer most : ",name); // ---> cnnot access from the function scope
+
+    //   function outer() {
+    //     let name = "Nikhil";
+
+    //     function inner() {
+    //       console.log("Inner : ", name);
+    //     }
+    //     return inner
+    //   }
+    //   const out = outer()
+    //   out()
+      
+    </script>
+
+    <script>
+
+        //  practical usecase of closure : -
+
+        // let btn1 = document.querySelector("#orange")
+        // let btn2 = document.querySelector("#green")
+
+        // function colorHandler(color){
+        //     return function(){
+        //         document.body.style.backgroundColor = color
+        //     }
+        // }
+
+        // btn1.addEventListener('click',colorHandler("orange"))
+        // btn2.addEventListener('click',colorHandler("green"))
+
+
+    </script>
+  </body>
+</html>
