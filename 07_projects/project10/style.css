@@ -1,4 +1,4 @@
-body {
+body { 
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -7,15 +7,11 @@ body {
   background: #ccc;
 }
 
-#emoji {
-  font-size: 10rem;
-  filter: grayscale(1);
-  transition-property: transfrom, filter;
-  transition-duration: 200ms;
-  cursor: pointer;
-}
 
-#emoji:hover {
-  transform: scale(1.3);
-  filter: grayscale(0);
+#emoji {
+  font-size: 100px;              
+  display: inline-block;         
+  padding: 20px;                 
+  cursor: pointer;               
+  transition: filter 0.3s ease;  
 }
