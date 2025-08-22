@@ -36,6 +36,7 @@ input {
 .table {
   background: #252323;
   width: 100%;
+  border-radius: 8px;
 }
 
 .table-section {
@@ -66,8 +67,47 @@ input {
 .btn {
   background: #1a1919;
   border: none;
-  color: #fff;
+  color: #e3e1e1;
   margin-bottom: 20px;
   padding: 10px 20px;
+  cursor:pointer;
+  border-radius: 8px;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+.table-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  text-align: center;
+}
+
+.delete-btn {
+  position: absolute;
+  right: 200px;
+  top: 45%;
+  transform: translateY(-50%);
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px; 
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
 }
