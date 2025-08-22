@@ -45,10 +45,9 @@ button {
 
 p {
   width: 400px;
-  height: 400px;
   background: #ccef;
   color: #000;
-  height: 50px;
+  min-height: 50px;
   border: 1px solid #555;
   border-radius: 10px;
   display: flex;
@@ -74,3 +73,4 @@ p {
 .italic {
   font-style: italic;
 }
+
