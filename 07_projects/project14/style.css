@@ -1,5 +1,6 @@
 body {
   background: rgb(17, 17, 17);
+  display:flex;
 }
 
 .header-content {
@@ -31,3 +32,4 @@ body {
 img {
   width: 900px;
 }
+
